@@ -52,7 +52,7 @@
     <string name="cytokinesis">Cells after cytokinesis:</string>
 
     <string name="vocab1"><font color="#660066">Chromosome:</font> condensed DNA \n<font color="#00a3cc">Chromatid:</font> a duplicated copy of a chromosome
-        \n<font color="#ff0000">Sister chromatids:</font> two chromatids with the same genetic information \n<font color="#ff3300">Centromere:</font> DNA that links
+        \n<font color="#ff0000">Sister chromatids:</font> two chromatids with the same genetic information \n<font color="#ff6600">Centromere:</font> DNA that links
         two chromatids together. Can also exist with one chromatid. \n<b>Tip</b> - count chromatids by the number of lines connected by the centromere.
         Count chromosomes by the number of centromeres</string>
     <string name="vocab2"><font color = "#00a3cc">Blue:</font> nuclear membrane \n<font color="#ff0000">Red:</font> DNA that is not condensed (chromatin)
