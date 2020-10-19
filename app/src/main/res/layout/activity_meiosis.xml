@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Meiosis">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/mitosisInfoScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/toMeiosisButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/holo_red_light"
+            android:onClick="toMitosis"
+            android:text="To mitosis"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="Meiosis"
+            android:textColor="#0B0808"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/toQuizButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/holo_orange_dark"
+            android:onClick="toQuiz"
+            android:text="Do quiz!"
+            android:textColor="@android:color/background_light" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/mitosisInfoScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/whatIsMeiosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What is Meiosis?"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/meiosisDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/meiosisDesc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n How many times does a cell divide in meiosis?"
+                android:textColor="#E91E63"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_purple"
+                    android:onClick="checkAnswer"
+                    android:text="1"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="correct"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="checkAnswer"
+                    android:text="2"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="checkAnswer"
+                    android:text="3"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nBrief reminder on vocabulary:"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/vocabImg1"
+                android:layout_width="match_parent"
+                android:layout_height="425dp"
+                app:srcCompat="@drawable/vocab1" />
+
+            <TextView
+                android:id="@+id/vocab1Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vocab1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/interphaseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\nInterphase"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/interphaseImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/interphase" />
+
+            <TextView
+                android:id="@+id/vocab2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vocab2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/interphaseDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/interphaseDesc2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/prophase1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Prophase 1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/prophase1Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/prophase1" />
+
+            <TextView
+                android:id="@+id/vocab3TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vocab3"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/prophase1Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prophase1Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/crossingOver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crossingOverDesc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/crossingOverImg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/crossing_over" />
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What moves next to each other in prophase 1?"
+                android:textColor="#194ADA"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FF5722"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:text="Centrioles"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#4CAF50"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:text="Random sister chromatids"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F66898"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:tag="correct"
+                    android:text="Homologous chromosomes"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/metaphase1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Metaphase 1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/metaphase1Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/metaphase1" />
+
+            <TextView
+                android:id="@+id/metaphase1Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/metaphase1Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/anaphase1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Anaphase 1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/anaphase1Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/anaphase1" />
+
+            <TextView
+                android:id="@+id/anaphase1Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/anaphase1Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/telophase1Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Telophase 1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/telophase1Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/telophase1" />
+
+            <TextView
+                android:id="@+id/telophase1Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telophase1Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cytokinesis1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cytokinesis"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/cytokinesis1Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/cytokinesis1" />
+
+            <TextView
+                android:id="@+id/prophase2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Prophase 2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/prophaseImg"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/prophase2" />
+
+            <TextView
+                android:id="@+id/prophase2Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/prophase2Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/metaphase2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Metaphase 2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/metaphase2Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/metaphase2" />
+
+            <TextView
+                android:id="@+id/metaphase2Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/metaphase2Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="When does crossing over occur?"
+                android:textColor="#08B333"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:text="After metaphase 1"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#8758DA"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:text="Prophase 2"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFC107"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:tag="correct"
+                    android:text="Between prophase 1 and metaphase 1"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#009688"
+                    android:onClick="checkAnswer"
+                    android:padding="5dp"
+                    android:text="During prophase 1"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/anaphase2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Anaphase 2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/anaphase2Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/anaphase2" />
+
+            <TextView
+                android:id="@+id/anaphase2Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/anaphase2Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/telophase2Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\n Telophase 2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:id="@+id/telophase2Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/telophase2" />
+
+            <TextView
+                android:id="@+id/telophase2Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telophase2Desc"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cytokinesis2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cytokinesis"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/cytokinesis2Img"
+                android:layout_width="match_parent"
+                android:layout_height="389dp"
+                app:srcCompat="@drawable/cytokinesis2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/meiosisAdvantages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/advantages"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider"
+                        android:foreground="@android:color/background_dark" />
+
+                    <TextView
+                        android:id="@+id/meiosisAdvantages1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\nGenetic variety, which may have positive effects on the organism’s ability to survive or reproduce."
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:foreground="@android:color/background_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/meiosisDisadvantages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disadvantages"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider"
+                        android:foreground="@android:color/background_dark" />
+
+                    <TextView
+                        android:id="@+id/mitosisDisadvantages1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\nTakes time to find another partner for sexual reproduction."
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/mitosisDisadvantages2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\nSome genetic combinations/mutations may be detrimental for survival. "
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

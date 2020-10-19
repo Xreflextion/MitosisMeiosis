@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Mitosis</string>
+
+    <string name="mitosisDesc"><b>Mitosis</b> is a process where one cell divides itself into two cells. Both of the new cells have the same genetic information as their parent.
+        This process can only be done with eukaryotic cells. Some organisms undergo mitosis to reproduce, which is also known as <b>asexual reproduction</b>
+        (reproduction with one parent only). Otherwise, mitosis is done by the cells in the body for development and growth. For example, cells in a human baby carry out mitosis
+        so the baby can grow into a teenager. In a multicellular organism, cells that undergo mitosis are known as somatic cells. Mitosis goes through 4 stages,
+        Prophase, Metaphase, Anaphase, and Telophase (also known as <b>PMAT</b>).</string>
+    <string name="interphaseDesc">Interphase is not a phase in mitosis, but is still important to know about because it is the phase that a cell spends most of their life in.
+        Additionally, when it becomes time to undergo mitosis, this is the phase where DNA duplicates so both <b>daughter cells</b> (product of cell division) can have an equal
+        amount of genetic information as the parent. In this stage, the DNA of the cell (currently called <b>chromatin</b>) is coiled up like spaghetti, and rests within the
+        nuclear membrane. When chromatin doubles and condenses, it becomes <b>chromosomes</b>.</string>
+    <string name="prophaseDesc">(Three chromosomes are shown for easier understanding) \n \n
+        In prophase the chromosomes condense, and the nuclear membrane disappears. On both sides of the cell, little cylinders called <b>centrioles</b> release
+        stringlike fibres called <b>spindles</b>.</string>
+    <string name="metaphaseDesc">In metaphase, spindles attach to the middle of each centromere. Chromosomes are moved to the middle of the cell (also known as the equator)
+        and line up in a single file line.</string>
+    <string name="anaphaseDesc">During anaphase, spindle fibres pull sister chromatids apart to opposite sides of cell. The centromere divides with them.</string>
+    <string name="telophaseDesc">In the final phase, the nuclear membrane appears on both sides of the cell, surrounding each group of chromosomes.
+        The spindles retract, and the cell prepares to be divided. The process where the cell is divided into two daughter cells is known as cytokinesis,
+        which happens after telophase. The result are two daughter cells completely identical to the previous cell. Both cells have the same number of chromosomes
+        and chromatids as the parent cell, making them <b>diploid cells</b>.</string>
+
+    <string name="meiosisDesc"><b>Meiosis</b> is a process of cell division in which a germ cell creates sex cells <b>(gametes)</b> for <b>sexual reproduction</b>. Meiosis is different
+        from mitosis because every daughter cell is unique, and the number of chromosomes in each cell is half the amount of the parent cell. Those are called <b>haploid cells</b>.
+        Cells that do meiosis to create sex cells are known as germ cells. They either create a sperm cell or an egg cell, depending on the gender of the organism.
+        This sperm or egg later meets another egg or sperm, and mixes into a <b>zygote</b>, which later grows into a child through mitosis. The process of meiosis is a bit
+        like mitosis, since they both follow <b>PMAT</b> (prophase, metaphase, anaphase, telophase). However, meiosis goes through PMAT twice to create haploid cells.
+        To differentiate between the first division and the second, numbers are added after the name of the process (prophase 1, prophase 2).</string>
+    <string name="interphaseDesc2">\n Like mitosis, interphase is not a part of meiosis, but it is still the phase where DNA duplicates so the cell can divide.
+        In this stage, the DNA (chromatin) of the cell is coiled up like spaghetti, and rests within the nuclear membrane. When it becomes time undergo meiosis,
+        the DNA doubles.</string>
+    <string name="prophase1Desc">(Only four chromosomes are shown for easier understanding)\n In prophase 1, the nuclear membrane disappears, and chromosomes condense. Centrioles become active and spindles attach to
+        centromeres. However, unlike mitosis, <b>homologous chromosomes</b> move next to each other. Homologous chromosomes are pairs of chromosomes that code for the
+        same genetic information. An organism produced from sexual reproduction receives one from their mother, and the other from their father.
+        Once they are together, they begin a process between prophase 1 and metaphase 1 known as crossing over.</string>
+    <string name="crossingOverDesc">\n Crossing over is when homologous chromosomes exchange genetic information with each other. This is what makes each
+        daughter cell at the end of meiosis is unique. When homologous chromosomes exchange DNA, they become <b>recombinant chromosomes</b>.</string>
+    <string name="metaphase1Desc">Homologous chromosomes move to the equator (middle) of cell, in pairs. The possibility of getting one recombinant chromosome on the left and
+        the other on the right is known as <b>independent assortment</b>.</string>
+    <string name="anaphase1Desc">Spindles pull homologous chromosomes apart. There are now sister chromatids on either side of the cell.</string>
+    <string name="telophase1Desc">The nuclear membrane may reform, and sister chromatids may uncoil. Spindles retract and cell divides. There are now
+        two daughter cells ready to undergo PMAT again. In each cell there are 23 chromosomes, and 46 chromatids.</string>
+    <string name="prophase2Desc">The nuclear membrane breaks down. Centrioles become active once again and attach to centromeres connecting the sister chromatid.
+        This time, crossing over does not happen.</string>
+    <string name="metaphase2Desc">Chromosomes move to the equator of the cell, in a single file line.</string>
+    <string name="anaphase2Desc">Sister chromatids are pulled to opposite sides of cell by the spindles. The centromere divides as well.</string>
+    <string name="telophase2Desc">The nuclear membrane reappears, spindles retract and each cell divides. If the cells are sperm cells, the end products are four
+        unique haploid cells. Otherwise, one egg cell survives and receives all the nutrients while the other three die off. Those are known as polar bodies.
+        Gametes have now been created and are ready to interact with another gamete to create a zygote.</string>
+
+    <string name="cytokinesis">Cells after cytokinesis:</string>
+
+    <string name="vocab1"><font color="#660066">Chromosome:</font> condensed DNA \n<font color="#00a3cc">Chromatid:</font> a duplicated copy of a chromosome
+        \n<font color="#ff0000">Sister chromatids:</font> two chromatids with the same genetic information \n<font color="#ff3300">Centromere:</font> DNA that links
+        two chromatids together. Can also exist with one chromatid. \n<b>Tip</b> - count chromatids by the number of lines connected by the centromere.
+        Count chromosomes by the number of centromeres</string>
+    <string name="vocab2"><font color = "#00a3cc">Blue:</font> nuclear membrane \n<font color="#ff0000">Red:</font> DNA that is not condensed (chromatin)
+        \n<font color="#999999">Grey:</font> nucleoid</string>
+    <string name="vocab3"><font color="#00cc00">Green:</font> centrioles \n<font color="#e6e600">Yellow:</font> spindles \n</string>
+    <string name="whatPhase">What phase is this?</string>
+    <string name="fillBlanks">Fill in the blanks with the word only.</string>
+
+    <string name="disadvantages">Disadvantages</string>
+    <string name="advantages">Advantages</string>
+
+    <string name="questionsLeft">Questions left: %1$d</string>
+    <string name="score">Score: %1$d</string>
+    <string name="correct">Correct! %1$s</string>
+    <string name="wrong">Incorrect... %1$s</string>
+</resources>
