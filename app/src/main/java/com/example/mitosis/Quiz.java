@@ -38,6 +38,7 @@ public class Quiz extends AppCompatActivity {
     private TextView score_text_view;
     private TextView questions_left_text_view;
     private TextView response_text_view;
+    private TextView final_score;
     private ImageView img_view;
 
     private ArrayList<ConstraintLayout> layouts;
@@ -149,7 +150,7 @@ public class Quiz extends AppCompatActivity {
                     }
                     break;
                 } catch( Exception e) {
-                    Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Sorry, there was a problem!", Toast.LENGTH_LONG).show();
                 }
             case 2:
                 ImageView diagram_img = (ImageView) findViewById(R.id.diagramImgView);
@@ -187,7 +188,7 @@ public class Quiz extends AppCompatActivity {
                     answer = Integer.toString(num);
                     seen.add(answer);
 
-                    lst_view = (ListView) findViewById(R.id.listView);
+                    lst_view = findViewById(R.id.listView);
                     ArrayList<String> select_all_options = new ArrayList<>();
 
                     for (int i=0; i<5; i++) {
@@ -224,7 +225,7 @@ public class Quiz extends AppCompatActivity {
                     break;
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Sorry, there was a problem!", Toast.LENGTH_LONG).show();
                 }
 
         }
@@ -246,7 +247,7 @@ public class Quiz extends AppCompatActivity {
                         response_text_view.setTextColor(Color.GREEN);
                         score += 1;
                     } else {
-                        response_text_view.setText(getString(R.string.wrong, sad.get(rand.nextInt(sad.size())) + "\n Answer was: " + answer));
+                        response_text_view.setText(getString(R.string.wrong, sad.get(rand.nextInt(sad.size())) + "\nAnswer was: " + answer));
                         response_text_view.setTextColor(Color.RED);
                     }
                     button = (Button) findViewById(R.id.nextPgButton);
@@ -367,7 +368,7 @@ public class Quiz extends AppCompatActivity {
         question_text_view.setText("");
         if (questions_left <= 0) {
             cur_layout = main;
-            score_text_view.setText("Final Score: "+ score + "/" + total_score);
+            final_score.setText("Final Score: "+ score + "/" + total_score);
             Button button = (Button) findViewById(R.id.startButton);
             button.setText("Take the quiz again?");
         } else {
@@ -404,6 +405,7 @@ public class Quiz extends AppCompatActivity {
             answers = new ArrayList<>();
 
             score_text_view.setText(getString(R.string.score, 0));
+            final_score.setText("");
         }
         switch_layout(v);
     }
@@ -454,6 +456,7 @@ public class Quiz extends AppCompatActivity {
         questions_left_text_view = (TextView) findViewById(R.id.questionsLeftTextView);
         score_text_view = (TextView) findViewById(R.id.scoreTextView);
         response_text_view = (TextView) findViewById(R.id.responseTextView);
+        final_score = (TextView) findViewById(R.id.finalScoreTextView);
         img_view = (ImageView) findViewById(R.id.mcImageView);
         lst_view  = (ListView) findViewById(R.id.listView);
 
